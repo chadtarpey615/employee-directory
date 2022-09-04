@@ -16,7 +16,18 @@
     <% end %>
   </div>
 
-  <div id="employees" class="min-w-full">
+  <table id="employees" class="table-auto w-full mt-5">
+   <thead>
+  <tr class="bg-gray-200">
+    <th>Name: </th>
+    <th>Email: </th>
+    <th>Bio: </th>  
+    <th>Show </th>  
+    <th>Edit </th>  
+    </tr>
+ </thead>
     <%= render @employees %>
-  </div>
+  </table>
 </div>
+
+
