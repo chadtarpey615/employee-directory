@@ -2,10 +2,13 @@ require "test_helper"
 
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in users(:chad)
     @employee = employees(:one)
   end
 
+
   test "should get index" do
+    sign_out users(:chad)
     get employees_url
     assert_response :success
   end
@@ -24,6 +27,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show employee" do
+    sign_out users(:chad)
+
     get employee_url(@employee)
     assert_response :success
   end

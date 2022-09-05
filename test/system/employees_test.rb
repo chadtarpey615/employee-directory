@@ -17,7 +17,6 @@ class EmployeesTest < ApplicationSystemTestCase
     fill_in "Bio", with: @employee.bio
     fill_in "Email", with: @employee.email
     fill_in "Name", with: @employee.name
-    fill_in "User", with: @employee.user_id
     click_on "Create Employee"
 
     assert_text "Employee was successfully created"
@@ -31,7 +30,6 @@ class EmployeesTest < ApplicationSystemTestCase
     fill_in "Bio", with: @employee.bio
     fill_in "Email", with: @employee.email
     fill_in "Name", with: @employee.name
-    fill_in "User", with: @employee.user_id
     click_on "Update Employee"
 
     assert_text "Employee was successfully updated"
