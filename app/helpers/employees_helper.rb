@@ -1,5 +1,5 @@
 module EmployeesHelper
-     def avatar_url(employee)
+ def avatar_url(employee)
         puts "*" * 100
         puts employee.inspect
         puts "*" * 100
@@ -7,3 +7,6 @@ module EmployeesHelper
   "http://gravatar.com/avatar/#{gravatar_id}.png"
  end
 end
+
+
+#  default_url = "#{root_url}images/guest.png"

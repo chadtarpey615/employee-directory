@@ -4,7 +4,7 @@
   <p><%= employee.bio %></p>
 <% else %>
 <tr>
-  <td><%= image_tag avatar_url(employee.gravatar) %></td>
+  <td><%= image_tag avatar_url(employee.email) %></td>
   <td><%= employee.name %></td>
   <td><%= employee.email %></td>
   <td class="text-sm"><%= employee.bio %></td>
