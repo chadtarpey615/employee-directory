@@ -1,8 +1,14 @@
+<% if action_name == "show" %>
+  <p><%= employee.name %></p>
+  <p><%= employee.email %></p>
+  <p><%= employee.bio %></p>
+<% else %>
 <tr>
+  <td><%= image_tag avatar_url(employee.gravatar) %></td>
   <td><%= employee.name %></td>
   <td><%= employee.email %></td>
   <td class="text-sm"><%= employee.bio %></td>
-
+<% end %>
   <% if action_name != "show" %>
     <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
     <td><%= link_to 'Edit this employee', edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>

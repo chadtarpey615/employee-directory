@@ -21,6 +21,11 @@
     <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
+   <div class="my-5">
+    <%= form.label :gravatar %>
+    <%= form.text_field :gravatar, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
   <div class="my-5">
     <%= form.label :bio %>
     <%= form.text_area :bio, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
