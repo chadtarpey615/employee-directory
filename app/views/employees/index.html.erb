@@ -1,33 +1,42 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Employees</h1>
-    <%= link_to 'New employee', new_employee_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<% if user_signed_in? %>
+  <div class="w-full">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
 
-    <% if user_signed_in? %>
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-4xl">Employees</h1>
+      <%= link_to 'New employee', new_employee_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+
       <%= link_to 'Logout' , destroy_user_session_path, method: :delete,
           class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-    <% else %>
-      <%= link_to 'Login' , new_user_session_path,
-          class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-    <% end %>
+    
+    </div>
+    <table id="employees" class="table-auto w-full mt-5">
+      <thead>
+        <tr class="bg-gray-200">
+          <th>Name: </th>
+          <th>Email: </th>
+          <th>Bio: </th>  
+          <th>Show </th>  
+          <th>Edit </th>  
+        </tr>
+      </thead>
+      <%= render @employees %>
+    </table>
   </div>
 
-  <table id="employees" class="table-auto w-full mt-5">
-   <thead>
-  <tr class="bg-gray-200">
-    <th>Name: </th>
-    <th>Email: </th>
-    <th>Bio: </th>  
-    <th>Show </th>  
-    <th>Edit </th>  
-    </tr>
- </thead>
-    <%= render @employees %>
-  </table>
-</div>
+<% else %>
+  <div class="w-full">
+    <h1 class="flex justify-center mt-10 font-bold text-4xl">Employee Directory</h1>
+    <p class="flex justify-center mt-10 text-2xl">Please login to view the employee directory</p>
+     
+  <%= link_to 'Login' , new_user_session_path,
+      class: "flex justify-center  rounded-lg py-3 px-5 bg-blue-600 text-white font-medium" %>
+  </div>
+
+<% end %>
+
 
 

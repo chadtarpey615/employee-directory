@@ -1,13 +1,13 @@
 <tr>
-    <td><%= employee.name %></td>
-    <td><%= employee.email %></td>
-    <td class="text-sm"><%= employee.bio %></td>
+  <td><%= employee.name %></td>
+  <td><%= employee.email %></td>
+  <td class="text-sm"><%= employee.bio %></td>
 
   <% if action_name != "show" %>
-    <th><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </th>
-    <th> <%= link_to 'Edit this employee', edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </th>
+    <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
+    <td><%= link_to 'Edit this employee', edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
   <% end %>
-  </tr>
+</tr>
 
 
 
