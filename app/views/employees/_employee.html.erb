@@ -11,7 +11,7 @@
 <% end %>
   <% if action_name != "show" %>
     <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
-    <td><%= link_to 'Edit this employee', edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
+    <td><%= link_to fa_icon('gear', text: "edit"), edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
   <% end %>
 </tr>
 

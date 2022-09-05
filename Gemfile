@@ -48,6 +48,7 @@ gem "devise"
 gem 'devise-tailwinded'
 
 
+gem "font-awesome-rails"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -77,3 +78,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+

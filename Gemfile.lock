@@ -97,6 +97,8 @@ GEM
     devise-tailwinded (0.1.5)
     digest (3.1.0)
     erubi (1.11.0)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -241,6 +243,7 @@ DEPENDENCIES
   debug
   devise
   devise-tailwinded
+  font-awesome-rails
   importmap-rails
   jbuilder
   mysql2 (~> 0.5)
