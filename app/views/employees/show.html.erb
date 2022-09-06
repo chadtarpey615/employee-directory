@@ -8,11 +8,9 @@
  </div>
 </div>
 
-<div class="flex flex-col">
-  <%= link_to 'Edit this employee', edit_employee_path(@employee), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100  font-medium" %>
-  <div class=" ml-2">
+<div class="flex flex-col w-3/5">
+  <%= link_to 'Edit this employee', edit_employee_path(@employee), class: "rounded-lg py-3 px-5 bg-gray-100 font-medium w-3/5" %>
    <%= button_to 'Destroy this employee', employee_path(@employee), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-  </div>
-  <%= link_to 'Back to employees', employees_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100  font-medium" %>
+  <%= link_to 'Back to employees', employees_path, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium w-3/5" %>
 </div>
  
