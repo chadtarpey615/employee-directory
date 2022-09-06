@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.18'
+gem 'mysql2'
 
 gem 'activerecord-mysql2-adapter'
 
