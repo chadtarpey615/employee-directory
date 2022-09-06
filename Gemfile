@@ -9,8 +9,7 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use mysql as the database for Active Record
-gem 'mysql2'
+
 
 gem 'activerecord-mysql2-adapter'
 
@@ -66,6 +65,8 @@ group :development, :test do
 end
 
 group :development do
+  # Use mysql as the database for Active Record
+  gem 'mysql2'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -74,6 +75,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :production do 
+  gem 'pg'
 end
 
 group :test do
