@@ -1,0 +1,23 @@
+<nav class="flex h-14 bg-slate-600 items-center">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+                <!-- Logo -->
+          <div>
+            <%= link_to "Employee Directory", root_path, class: "text-white text-xl font-bold" %>
+          </div>
+            
+        </div>
+         <div class="hidden md:flex items-center space-x-1">
+                <%= link_to "Employees", employees_path, class: "text-white hover:bg-slate-700 px-3 py-2 rounded" %>
+
+                <% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "text-white hover:bg-slate-700 px-3 py-2 rounded" %>
+                <% else %>
+                <%= link_to "Login", new_user_session_path, class: "text-white hover:bg-slate-700 px-3 py-2 rounded" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+
+</nav>
