@@ -52,4 +52,5 @@ production:
   <<: *default
   database: employee_directory_production
   username: employee_directory
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV["EMPLOYEE_DIRECTORY_DATABASE_PASSWORD"] %>
