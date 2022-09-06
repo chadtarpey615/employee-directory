@@ -3,9 +3,13 @@ class EmployeesController < ApplicationController
 
   # GET /employees or /employees.json
   def index
-     if current_user
-    @pagy, @employees = pagy(current_user&.employees, items: 7)
-     end
+    if current_user
+      @employees = current_user&.employees
+      if params[:search].present?
+        @employees = @employees.where("name LIKE ?", "%#{params[:search]}%")
+      end
+      @pagy, @employees = pagy(@employees, items: 7)
+    end
   end
 
   # GET /employees/1 or /employees/1.json
