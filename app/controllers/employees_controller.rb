@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees or /employees.json
   def index
-    @employees = current_user&.employees
+    @pagy, @employees = pagy(current_user&.employees, items: 7)
   end
 
   # GET /employees/1 or /employees/1.json
