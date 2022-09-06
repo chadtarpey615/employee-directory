@@ -48,9 +48,8 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default 
-  url: <%= ENV["MY_APP_DATABASE_URL"] %>
+production: 
+  url: <%= ENV["DATABASE_URL"] %>
   database: employee_directory_production
   username: employee_directory
   password: <%= ENV["EMPLOYEE_DIRECTORY_DATABASE_PASSWORD"] %>
