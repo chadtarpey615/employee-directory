@@ -12,10 +12,10 @@
    
     </div>
     <%== pagy_nav(@pagy)%>
-    <%= form_tag(employees_path, method: :get) do %>
-    <%= text_field_tag :search, params[:search], method: :get, placeholder: "Search by name or email", class: "w-full rounded-lg py-3 px-5 bg-gray-100 font-medium mt-5" %>
-    <%= submit_tag("search", class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium") %>
-    <% end %>
+     <%= form_tag(employees_path, method: :get) do %>
+     <%= text_field_tag :search, params[:search], placeholder: "Search by name or email", class: "w-full rounded-lg py-3 px-5 bg-gray-100 font-medium mt-5" %>
+     <%= submit_tag("Search", class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium") %>
+     <% end %>
 
     
     <table id="employees" class="table-auto w-full mt-5">

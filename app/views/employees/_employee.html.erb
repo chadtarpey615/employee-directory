@@ -13,10 +13,10 @@
 
 <% else %>
 <tr>
-  <td><%= image_tag avatar_url(employee.email) %></td>
-  <td><%= employee.name %></td>
-  <td><%= employee.email %></td>
-  <td class="text-sm"><%= employee.bio %></td>
+  <td ><%= image_tag avatar_url(employee.email) %></td>
+  <td class="text-sm md:text-md"><%= employee.name %></td>
+  <td class="text-sm md:text-lg"><%= employee.email %></td>
+  <td class="text-sm "><%= employee.bio %></td>
 <% end %>
   <% if action_name != "show" %>
     <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>

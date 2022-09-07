@@ -13,7 +13,7 @@ class EmployeesTest < ApplicationSystemTestCase
   test "should create employee" do
     sign_in users(:one)
     visit employees_url
-    click_on "New employee"
+    click_on "Add employee"
     fill_in "Bio", with: @employee.bio
     fill_in "Email", with: @employee.email
     fill_in "Name", with: @employee.name
@@ -40,6 +40,29 @@ class EmployeesTest < ApplicationSystemTestCase
     click_on "Destroy this employee", match: :first
     assert_text "Employee was successfully destroyed"
   end
+
+  test "should search for employee" do 
+    sign_in users(:one)
+    visit employees_url
+    fill_in "search", with: "Brandon"
+    click_on "Search"
+  end
+
+
+  test "should create multiple employees for pagination and click next" do 
+    sign_in users(:one)
+    visit employees_url
+    7.times do
+      click_on "Add employee"
+      fill_in "Bio", with: @employee.bio
+      fill_in "Email", with: @employee.email
+      fill_in "Name", with: @employee.name
+      click_on "Create Employee"
+      click_on "Back"
+    end  
+    click_on @pagy, text: "Next"
+  end
+
 
  
 end
