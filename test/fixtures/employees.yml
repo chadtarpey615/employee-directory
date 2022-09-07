@@ -1,13 +1,43 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Test
   email: MyString
   bio: MyText
   user: one
 
 two:
+  name: Test
+  email: MyString
+  bio: MyText
+  user: one
+
+three:
   name: MyString
   email: MyString
   bio: MyText
-  user: chad
+  user: one
+
+four:
+  name: MyString
+  email: MyString
+  bio: MyText
+  user: one
+
+five:
+  name: MyString
+  email: MyString
+  bio: MyText
+  user: one
+
+six:
+  name: MyString
+  email: MyString
+  bio: MyText
+  user: one
+
+seven:
+  name: MyString
+  email: MyString
+  bio: MyText
+  user: one

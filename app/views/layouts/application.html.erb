@@ -9,13 +9,21 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= render 'magic_test/support' if Rails.env.test? %>
   </head>
 
   <body>
-   <%= render "layouts/navbar" %>
-   <%= render "layouts/header" %>
-   <main class="container mx-auto mt-28 px-5 flex">
+    <%= render "layouts/navbar" %>
+    <%= render "layouts/header" %>
+    <main class="container mx-auto mt-28 px-5 flex">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
-   </main>
+    </main>
   </body>
 </html>

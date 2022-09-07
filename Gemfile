@@ -51,7 +51,7 @@ gem 'devise-tailwinded'
 gem "font-awesome-rails"
 
 gem 'pagy', '~> 5.10' # omit patch digit
-
+gem 'magic_test', group: :test
 # Use Sass to process CSS
 # gem "sassc-rails"
 

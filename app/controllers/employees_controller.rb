@@ -6,7 +6,7 @@ class EmployeesController < ApplicationController
     if current_user
       @employees = current_user&.employees
       if params[:search].present?
-        @employees = @employees.where("name LIKE ?", "%#{params[:search]}%")
+        @employees = @employees.where("name OR email LIKE ?", "%#{params[:search]}%") 
       end
       @pagy, @employees = pagy(@employees, items: 7)
     end
