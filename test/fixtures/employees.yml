@@ -41,3 +41,9 @@ seven:
   email: MyString
   bio: MyText
   user: one
+
+eight:
+  name: MyString
+  email: MyString
+  bio: MyText
+  user: one
