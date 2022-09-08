@@ -1,26 +1,13 @@
-<% if action_name == "show" %>
-  <div class="max-w-sm w-full lg:max-w-full lg:flex">
-   <%= image_tag avatar_url(employee.email), class: "h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" %>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div >
-      <p class="text-gray-900 font-bold text-xl"><%= employee.name %></div>
-      <p class="text-gray-700 text-base">Email: <%= employee.email %></p>
-      <p class="text-gray-700 text-base">Bio: <%= employee.bio %></p>
-    </div>
- 
-  </div>
-</div>
 
-<% else %>
 <tr>
   <td ><%= image_tag avatar_url(employee.email) %></td>
   <td class="text-sm md:text-md"><%= employee.name %></td>
   <td class="text-sm md:text-lg"><%= employee.email %></td>
   <td class="text-sm "><%= employee.bio %></td>
-<% end %>
+
   <% if action_name != "show" %>
-    <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
-    <td><%= link_to fa_icon('gear', text: "edit"), edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12" %> </td>
+    <td><%= link_to "Show this employee", employee, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block text-sm h-12 ring-2 ring-blue-600" %> </td>
+    <td><%= link_to fa_icon('gear', text: "edit"), edit_employee_path(employee), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block text-sm h-12 ring-2 ring-blue-600" %> </td>
   <% end %>
 </tr>
 

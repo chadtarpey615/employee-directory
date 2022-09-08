@@ -3,6 +3,7 @@ require "application_system_test_case"
 class EmployeesTest < ApplicationSystemTestCase
   setup do
     @employee = employees(:one)
+    @employee = employees(:two)
   end
 
   test "visiting the index" do
@@ -11,7 +12,7 @@ class EmployeesTest < ApplicationSystemTestCase
   end
 
   test "should create employee" do
-    sign_in users(:one)
+    sign_in users(:two)
     visit employees_url
     click_on "Add employee"
     fill_in "Bio", with: @employee.bio
@@ -23,7 +24,7 @@ class EmployeesTest < ApplicationSystemTestCase
   end
 
   test "should update Employee" do
-    sign_in users(:one)
+    sign_in users(:two)
     visit employee_url(@employee)
     click_on "Edit this employee", match: :first
     fill_in "Bio", with: @employee.bio
@@ -35,14 +36,14 @@ class EmployeesTest < ApplicationSystemTestCase
   end
 
   test "should destroy Employee" do
-    sign_in users(:one)
+    sign_in users(:two)
     visit employee_url(@employee)
     click_on "Destroy this employee", match: :first
     assert_text "Employee was successfully destroyed"
   end
 
   test "should search for employee" do 
-    sign_in users(:one)
+    sign_in users(:two)
     visit employees_url
     fill_in "search", with: "Brandon"
     click_on "Search"
@@ -57,7 +58,7 @@ class EmployeesTest < ApplicationSystemTestCase
   end
 
   test "user should log out successfully" do 
-    sign_in users(:one)
+    sign_in users(:two)
     visit employees_url 
     click_on 'Logout'
     assert page.has_content? 'Signed out successfully.' 
